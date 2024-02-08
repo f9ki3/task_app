@@ -1,0 +1,18 @@
+<!-- templates/edit.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+</head>
+<body>
+    <h1>Edit Student</h1>
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="task" value="{{ task[1] }}">
+        <label for="section">Section:</label>
+        <input type="text" id="section" name="description" value="{{ task[2] }}">
+        <button type="submit">Update Student</button>
+    </form>
+</body>
+</html>
