@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <h1>Edit Student</h1>
-        <form method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="task" value="{{ task[1] }}">
-            <label for="section">Section:</label>
-            <input type="text" id="section" name="description" value="{{ task[2] }}">
-            <button type="submit">Update Student</button>
-        </form>
+    <div class="">
+        <!-- modal add -->
+        <div id="add_div">
+            <h3 class="fw-bolder bg-primary text-light p-3">Edit Task</h3>
+            <div class="px-3">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <form method="post">
+                            <label for="">Task</label><br>
+                            <input required name="task" type="text" class="mb-2 w-100 rounded p-2 border" value="{{ task[1] }}"><br>
+                            <label for="">Description</label><br>
+                            <input required name="description" type="text" class="mb-2 w-100 rounded p-2 border" value="{{ task[2] }}"><br>
+                            <div style="display: flex; flex-direction: row; justify-content: end" >
+                                <button type="submit" class="btn w-50 me-2 btn-light border btn-sm">Submit</button>
+                                <a href="{{ url_for('home')}}" class="btn w-50 btn-light border btn-sm" >Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>    
 </body>
 </html>
